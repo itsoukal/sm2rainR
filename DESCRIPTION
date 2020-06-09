@@ -1,0 +1,24 @@
+Package: sm2rainR
+Type: Package
+Title: Implementation of SM2RAIN algorithm in R: Detecting rainfall from the bottom up
+Version: 0.1.0
+Authors@R: c(person("Ioannis", "Tsoukalas", role = c("aut", "cre"), email = "itsoukal@mail.ntua.gr"))
+Maintainer: Ioannis Tsoukalas <itsoukal@mail.ntua.gr>
+Description: Implementation of SM2RAIN algorithm in R: Estimation of Precipitation using Soil Moisture data. 
+        SM2RAIN is a simple algorithm for estimating rainfall from soil moisture data. 
+        If you do not believe it is possible, try yourself! 
+        The description of SM2RAIN and of its performance can be found in:
+        Brocca et al. (2013) <10.1002/grl.50173> and Brocca et al., 2014. <10.1002/2014JD021489> 
+        (also here <http://hydrology.irpi.cnr.it/research/sm2rain/ and here <http://www.irpi.cnr.it/en/focus/sm2rain/>).
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    hydroGOF,
+    pracma,
+    DEoptim
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.1.0
