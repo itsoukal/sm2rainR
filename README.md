@@ -60,33 +60,33 @@ itermax=100 and
 Opt=sm2rainCalib(fn=sm2rainNSE, data= ts_df, itermax=20, NP=10)
 ```
 
-    ## Iteration: 1 bestvalit: -0.639104 bestmemit:   86.640894  161.594181  140.581130
-    ## Iteration: 2 bestvalit: -0.639104 bestmemit:   86.640894  161.594181  140.581130
-    ## Iteration: 3 bestvalit: -0.656220 bestmemit:  121.477244   44.205181  132.977960
-    ## Iteration: 4 bestvalit: -0.656220 bestmemit:  121.477244   44.205181  132.977960
-    ## Iteration: 5 bestvalit: -0.732381 bestmemit:   99.049421   67.128358  140.581130
-    ## Iteration: 6 bestvalit: -0.732381 bestmemit:   99.049421   67.128358  140.581130
-    ## Iteration: 7 bestvalit: -0.732381 bestmemit:   99.049421   67.128358  140.581130
-    ## Iteration: 8 bestvalit: -0.756292 bestmemit:   81.002998   21.591476  144.187280
-    ## Iteration: 9 bestvalit: -0.756292 bestmemit:   81.002998   21.591476  144.187280
-    ## Iteration: 10 bestvalit: -0.756292 bestmemit:   81.002998   21.591476  144.187280
-    ## Iteration: 11 bestvalit: -0.762670 bestmemit:   74.177265   65.431471   19.491594
-    ## Iteration: 12 bestvalit: -0.762670 bestmemit:   74.177265   65.431471   19.491594
-    ## Iteration: 13 bestvalit: -0.774919 bestmemit:   96.176193   19.297452    8.718067
-    ## Iteration: 14 bestvalit: -0.774919 bestmemit:   96.176193   19.297452    8.718067
-    ## Iteration: 15 bestvalit: -0.781493 bestmemit:   91.363813   10.472967   16.917063
-    ## Iteration: 16 bestvalit: -0.794929 bestmemit:   81.518742   34.501822   13.445348
-    ## Iteration: 17 bestvalit: -0.794929 bestmemit:   81.518742   34.501822   13.445348
-    ## Iteration: 18 bestvalit: -0.794929 bestmemit:   81.518742   34.501822   13.445348
-    ## Iteration: 19 bestvalit: -0.794929 bestmemit:   81.518742   34.501822   13.445348
-    ## Iteration: 20 bestvalit: -0.794929 bestmemit:   81.518742   34.501822   13.445348
+    ## Iteration: 1 bestvalit: 0.408351 bestmemit:   35.710261  527.527671  106.149830
+    ## Iteration: 2 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 3 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 4 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 5 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 6 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 7 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 8 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 9 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 10 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 11 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 12 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 13 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 14 bestvalit: -0.774646 bestmemit:   99.307684    3.197116   14.222810
+    ## Iteration: 15 bestvalit: -0.774651 bestmemit:   98.572299   10.410196   16.550301
+    ## Iteration: 16 bestvalit: -0.787677 bestmemit:   59.076381   13.697113    7.179263
+    ## Iteration: 17 bestvalit: -0.812600 bestmemit:   67.292570   24.609645    9.177006
+    ## Iteration: 18 bestvalit: -0.812619 bestmemit:   80.035614    9.074405    6.754852
+    ## Iteration: 19 bestvalit: -0.820897 bestmemit:   77.907364   13.933653    6.754852
+    ## Iteration: 20 bestvalit: -0.820897 bestmemit:   77.907364   13.933653    6.754852
 
 ``` r
 # The NSE value obtained by calibration
 print(Opt$obj)
 ```
 
-    ## [1] 0.7949294
+    ## [1] 0.8208972
 
 ``` r
 # Estimate percipitation using SM2RAIN algorithm
@@ -105,4 +105,4 @@ legend("topleft", legend=c("Observed", "Simulated"), col=c('black', 'red'), lty=
 plot(Sim$Psim, Sim$Pobs, pch=19, xlab='Simulated rainfall [mm]', ylab='Observed rainfall [mm]')
 ```
 
-![](sm2rainR_readme_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
