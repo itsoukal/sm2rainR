@@ -45,7 +45,7 @@ sm2rain<-function(PAR, data,  NN=24, deltaSM=0.005) {
       if (SM[t]-SM[t-1]>deltaSM) {
         # SMav=(SM[t]+SM[t-1])/2
         # Psim[t-1]=Z*(SM[t]-SM[t-1])+a*SMav^b;
-        # Psim(t-1)=Z.*(SM(t)-SM(t-1))+a.*SMav.^b;
+
         Psim[t-1]=Z*(SM[t]-SM[t-1])+(a*SM[t]^b+a*SM[t-1]^b)/2
       }
     }
@@ -72,7 +72,7 @@ sm2rain<-function(PAR, data,  NN=24, deltaSM=0.005) {
     D=pracma::Reshape(D[1:(L*NN)],NN,L);
     D=colSums(D)/NN
   }
-
+  Psim=ifelse(Psim<=1,0,Psim)
 
   # Calculation of model performance
   IDcomp=Pobs>-1

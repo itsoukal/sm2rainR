@@ -32,10 +32,12 @@ sm2rainNSE=function(PAR, data,  NN=24, deltaSM=0.005) {
   Pobs=ifelse(Pobs<0,0,Pobs)
   Pobs=ifelse(is.nan(Pobs),NA,Pobs)
 
-  # avPobs=mean(Pobs, na.rm = T)
-  # NSE=-(sum((Psim-Pobs)^2, na.rm = T)/sum((Pobs-avPobs)^2, na.rm = T))
-  NSE=-hydroGOF::NSE(sim = Psim, obs=Pobs)
+  avPobs=mean(Pobs, na.rm = T)
+  NSE=-(1-(sum((Psim-Pobs)^2, na.rm = T)/sum((Pobs-avPobs)^2, na.rm = T)))
+  # NSE=-hydroGOF::NSE(sim = Psim, obs=Pobs)
   NSE=ifelse(test = is.nan(NSE), 10^6, NSE)
   NSE=ifelse(test = is.na(NSE), 10^6, NSE)
   return(NSE)
 }
+
+# sm2rainNSE(PAR = c(69.3796, 16.1741, 8.4747), data = data1, deltaSM = 0.0001)
